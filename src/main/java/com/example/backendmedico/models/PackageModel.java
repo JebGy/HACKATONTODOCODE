@@ -17,5 +17,5 @@ public class PackageModel {
 	@Column(name = "price")
 	private Double price;
 
-	private ServiceModel service;
+	// private ServiceModel service;
 }

@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "consultations")
@@ -22,7 +24,7 @@ public class ConsultationModel {
 
 	@Temporal(TemporalType.TIME)
 	@Column(name = "consultation_time", nullable = false)
-	private LocalDate consultationTime;
+	private Date consultationTime;
 
 	@Column(name = "total_amount", nullable = false)
 	private Double totalAmount;
@@ -30,11 +32,11 @@ public class ConsultationModel {
 	@Column(name = "is_paid", nullable = false)
 	private Boolean isPaid;
 
-	private PatientModel patient;
+	//private PatientModel patient;
 
-	private DoctorModel doctor;
+	//private DoctorModel doctor;
 
-	private ServiceModel service;
+	//private ServiceModel service;
 
-	private PackageModel servicePackage;
+	//private PackageModel servicePackage;
 }
