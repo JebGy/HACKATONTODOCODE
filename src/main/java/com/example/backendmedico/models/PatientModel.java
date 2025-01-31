@@ -12,7 +12,6 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class PatientModel {
 	@Id
-	@GeneratedValue(strategy = GenerationType.UUID)
 	@Column(name = "patient_id", nullable = false, length = 36)
 	private String patientId;
 

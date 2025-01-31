@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 @Entity
 @Table(name = "doctors")
@@ -30,7 +30,7 @@ public class DoctorModel {
 
 	@Temporal(TemporalType.DATE)
 	@Column(name = "birth_date", nullable = false)
-	private LocalDate birthDate;
+	private Date birthDate;
 
 	@Column(name = "phone", length = 20)
 	private String phone;
