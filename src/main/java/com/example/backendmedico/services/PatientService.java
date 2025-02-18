@@ -1,22 +1,23 @@
 package com.example.backendmedico.services;
 
 import com.example.backendmedico.models.PatientModel;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 import java.util.Map;
 
 public interface PatientService {
-	List<PatientModel> getAllPatients();
+	List<PatientModel> getAllPatients(Pageable page);
 
-	PatientModel getPatientById(final String patientId);
+	PatientModel getPatientById(String patientId);
 
-	PatientModel addPatient(final PatientModel patient);
+	PatientModel addPatient(PatientModel patient);
 
-	PatientModel updatePatient(final String patientId,final PatientModel patient);
+	PatientModel updatePatient(String patientId, PatientModel patient);
 
-	Integer deletePatient(final String patientId);
+	Integer deletePatient(String patientId);
 
-	PatientModel getPatientByDni(final String dni);
+	PatientModel getPatientByDni(String dni);
 
-	List<PatientModel> filterPatients(final Map<String, String> valuesToFilter);
+	List<PatientModel> filterPatients(Map<String, String> valuesToFilter, Pageable page);
 }
